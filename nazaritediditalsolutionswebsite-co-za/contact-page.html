@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Contact Us | Nazarite Digital Solutions</title>
+    <meta name="description" content="Contact Nazarite Digital Solutions to create modern, responsive websites designed to help businesses grow online.">
+    <link rel="canonical" href="https://www.nazaritedigitalsolutions.com/contact-page">
+    
+    <!-- GOOGLE TAG -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VVN8PZJTV5');
+    </script>
+    
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="Nazarite Digital Solutions">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon-nazarite-digital-solutions.svg">
+    <link rel="preload" as="image" href="logo-nazarite-digital-solutions.svg" fetchpriority="high">
+    
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body { background: linear-gradient(to bottom, white, #7171D1); min-height: 100vh; padding-top: 5rem; }
+
+/* ───────────────────────────────────────────────────── HEADER ───────────────────────────────────────────────────── */
+
+      /* ---------- HEADER ---------- */
+      
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        z-index: 200;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0 3vw;
+      }
+      
+      /* ---------- NAVBAR ---------- */
+      
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3vw;
+        z-index: 1000;
+      }
+
+      /* ---------- LOGO ---------- */
+      
+      .navbar-logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-shrink: 0;
+      }
+
+      .navbar-logo img {
+        height: 4rem;
+        width: auto;
+        display: block;
+      }
+
+      /* ---------- HAMBURGER BUTTON ---------- */
+      
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.2rem;
+        flex-shrink: 0;
+        z-index: 1100;
+      }
+
+      .hamburger .bar {
+        display: block;
+        width: 1.7rem;
+        height: 2.5px;
+        background-color: #006400;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+        transform-origin: center;
+      }
+
+      .hamburger.is-open .bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+        background-color: #00004D;
+      }
+    
+      .hamburger.is-open .bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+    
+      .hamburger.is-open .bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+        background-color: #00004D;
+      }
+
+      /* ---------- HAMBURGER DROP DOWN MENU ---------- */
+      
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 5rem;
+        right: 3vw;
+        width: min(22rem, 90vw);
+        text-align: center;
+        background-color: #00006D;
+        border-radius: 0.5rem;
+        flex-direction: column;
+        z-index: 999;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.35s ease;
+      }
+
+      .mobile-menu.is-open {
+        display: flex;
+        max-height: 50vh;
+      }
+
+      .mobile-menu a {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 1rem 3vw;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        display: block;
+      }
+
+      .mobile-menu a:last-child {
+        border-bottom: none;
+      }
+
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 1024px ---------- */
+      
+      @media (max-width: 1024px) {
+        .mobile-menu a:hover {
+          opacity: 1;
+        }
+      }
+
+      /* ---------- 700px ---------- */
+      
+      @media (max-width: 700px) {
+        .navbar {
+          padding: 0 4vw;
+        }
+
+        .navbar-logo img {
+          height: 2.5rem;
+        }
+
+        .mobile-menu a {
+          font-size: 1rem;
+          padding: 0.9rem 6vw;
+        }
+      }
+
+      /* ---------- 468px ---------- */
+      
+      @media (max-width: 468px) {
+        .navbar {
+          padding: 0 5vw;
+        }
+
+        .navbar-logo img {
+          height: 2rem;
+        }
+
+        .hamburger {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .hamburger .bar {
+          width: 1.4rem;
+        }
+  
+        .mobile-menu a {
+          font-size: 0.95rem;
+          padding: 0.8rem 7vw;
+        }
+      }
+      
+/* ─────────────────────────────────────────────────── CONTACT PAGE ───────────────────────────────────────────────── */
+
+      /* ---------- CONTACT PAGE WRAPPER ---------- */
+      
+      .contact-page-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5vw 3rem;
+      }
+
+      /* ---------- GET IN TOUCH HEADING ---------- */
+      
+      .get-in-touch-heading {
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        color: #00006D;
+        text-align: center;
+        letter-spacing: 0.05em;
+      }
+      
+      /* ---------- LETS CREATE A POWERFUL WEBSITE TOGETHER ---------- */
+    
+      .lets-create-a-powerful-website-together {
+        margin-top: 0.8rem;
+        margin-bottom: 3rem;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(1.8rem, 4vw, 2rem);
+        font-style: italic;
+        color: #006400;
+        text-align: center;
+        letter-spacing: 0.03em;
+      }
+
+      /* ---------- CONTACT BOX ---------- */
+    
+      .contact-box {
+        width: 100%;
+        max-width: 600px;
+        background-color: #DAE7E9;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px #00006D, 
+                    0 0 20px #00006D, 
+                    0 0 30px #00006D;
+        padding: 2.5rem 2rem 2.5rem;
+        border: 1px solid #00006D;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+
+      /* ---------- CONTACT US HEADING ---------- */
+      
+      .contact-us-heading {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+        color: #00006D;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #00006D;
+        text-decoration-thickness: 3px;
+        letter-spacing: 0.08em;
+      }
+
+      /* ---------- BUTTONS ---------- */
+      
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        align-items: center;
+      }
+
+      .contact-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+        width: 100%;
+        max-width: 320px;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0.5rem;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        text-decoration: none;
+      }
+
+      /* ---------- WHATSAPP BUTTON ---------- */
+      
+      .whatsapp-button {
+        color: white;
+        border: 1.5px solid white;
+        box-shadow: 0 0 4px #25D366, 
+                    0 0 8px #25D366, 
+                    0 0 12px #25D366;
+        background-color: #25D366;
+      }
+      
+      .whatsapp-button .button-icon {
+        fill: white;
+      }
+
+      .whatsapp-button:hover {
+        transform: translateY(-5px);
+      }
+
+      /* ---------- EMAIL BUTTON ---------- */
+    
+      .email-button {
+        color: white;
+        background-color: #00006D;
+      }
+
+      .email-button .button-icon {
+        fill: white;
+      }
+      
+      .email-button:hover {
+        transform: translateY(-5px);
+      }
+
+      /* ---------- SUBMIT BUTTON ---------- */
+    
+      .submit-button {
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #006400;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 0.9rem 2.5rem;
+        cursor: pointer;
+      }
+
+      .submit-button:hover {
+        animation: spinX 0.8s ease forwards;
+      }
+
+      @keyframes spinX {
+        0%   { transform: rotateX(0deg); }
+        100% { transform: rotateX(360deg); }
+      }
+
+      /* ---------- FORM ---------- */
+    
+      .enquiry-form-heading {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(1.3rem, 3vw, 1.8rem);
+        color: #00006D;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: #00006D;
+        text-decoration-thickness: 3px;
+        letter-spacing: 0.08em;
+        margin-top: 1.5rem;
+      }
+    
+      .enquiry-form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .enquiry-form input,
+      .enquiry-form textarea {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        background-color: white;
+        color: black;
+        font-family: Arial, sans-serif;
+        font-size: 0.95rem;
+        border: 2px solid #00006D;
+        border-radius: 0.5rem;
+        outline: none;
+        transition: background-color 0.2s;
+        -webkit-text-fill-color: black;
+      }
+
+      .enquiry-form input:focus,
+      .enquiry-form textarea:focus,
+      .enquiry-form input:not(:placeholder-shown),
+      .enquiry-form textarea:not(:placeholder-shown) {
+        background-color: #DAE7E9;
+      }
+
+      .enquiry-form input:-webkit-autofill,
+      .enquiry-form input:-webkit-autofill:hover,
+      .enquiry-form input:-webkit-autofill:focus,
+      .enquiry-form input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0px 1000px #DAE7E9 inset !important;
+        box-shadow: 0 0 0px 1000px #DAE7E9 inset !important;
+        -webkit-text-fill-color: black !important;
+        background-color: #DAE7E9 !important;
+        transition: background-color 5000s ease-in-out 0s;
+      }
+
+      .enquiry-form textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+
+      /* ---------- CAPTCHA ---------- */
+  
+      .h-captcha {
+        display: flex;
+        justify-content: center;
+      }
+      
+      /* ---------- COPYRIGHT ---------- */
+      
+      .copyright {
+        margin-top: 3rem;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 0.8rem;
+        color: black;
+        text-align: center;
+      }
+
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 700px ---------- */
+    
+      @media screen and (max-width: 700px) {
+        .get-in-touch-heading {
+          font-size: 1.8rem;
+        }
+      
+        .contact-box {
+          max-width: 95%;
+          padding: 1.75rem 1.25rem;
+        }
+      
+        .contact-button {
+          max-width: 100%;
+        }
+        
+        .whatsapp-button:hover {
+          transform: none;
+        }
+
+        .email-button:hover {
+          transform: none;
+        }
+
+        .submit-button:hover {
+          animation: none;
+        }
+      }
+
+      /* ---------- 468px ---------- */
+    
+      @media screen and (max-width: 468px) {
+        html {
+          font-size: 15px;
+        }
+        
+        .get-in-touch-heading {
+          font-size: 1.5rem;
+        }
+      
+        .lets-create-a-powerful-website-together {
+          font-size: 1.2rem;
+        }
+      
+        .contact-box {
+          max-width: 100%;
+          padding: 1.5rem 1rem;
+        }
+      
+        .contact-us-heading,
+        .enquiry-form-heading {
+          font-size: 1.2rem;
+        }
+      
+        .contact-button {
+          font-size: 0.9rem;
+          padding: 0.7rem 1rem;
+        }
+        
+        .whatsapp-button:hover {
+          transform: none;
+        }
+
+        .email-button:hover {
+          transform: none;
+        }
+
+        .submit-button:hover {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  
+<!-- ──────────────────────────────────────────────────── BODY ───────────────────────────────────────────────────── -->
+  
+  <body id="contact-page">
+
+<!-- ─────────────────────────────────────────────────── HEADER ──────────────────────────────────────────────────── -->
+  
+    <header class="site-header">
+  
+      <nav class="navbar">
+
+        <!-- LOGO -->
+    
+        <div class="navbar-logo">
+          <a href="index.html">
+            <img src="logo-nazarite-digital-solutions.svg" alt="Nazarite Digital Solutions Logo" width="268" height="80" fetchpriority="high">
+          </a>
+        </div>
+
+      <!-- HAMBURGER -->
+    
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+      </nav>
+
+      <!-- HAMBURGER DROP DOWN MENU -->
+  
+      <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-page">About</a>
+        <a href="projects-page.html">Projects</a>
+        <a href="services-page.html">Services</a>
+        <a href="#contact-page">Contact</a>
+        <a href="terms-and-conditions-page.html">Terms & Conditions</a>
+      </div>
+    
+    </header>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.classList.toggle('is-open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+
+        if (isOpen) {
+          mobileMenu.classList.add('is-open');
+        } else {
+          mobileMenu.classList.remove('is-open');
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', false);
+          mobileMenu.classList.remove('is-open');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', false);
+          mobileMenu.classList.remove('is-open');
+        }
+      });
+    </script>
+
+<!-- ────────────────────────────────────────────────── CONTACT PAGE ─────────────────────────────────────────────── -->
+  
+    <div class="contact-page-wrapper">
+
+      <!-- GET IN TOUCH HEADING -->
+      
+      <h1 class="get-in-touch-heading">Get In Touch</h1>
+    
+      <!-- LETS CREATE A POWERFUL WEBSITE TOGETHER -->
+      
+      <h2 class="lets-create-a-powerful-website-together">Let's create a powerful website together!</h2>
+
+      <!-- CONTACT BOX -->
+    
+      <div class="contact-box">
+
+        <!-- CONTACT US HEADING -->
+      
+        <h2 class="contact-us-heading">CONTACT US</h2>
+
+        <!-- CONTACT US BUTTONS -->
+      
+        <div class="buttons">
+
+        <!-- WHATSAPP BUTTON -->
+          
+          <a href="https://wa.me/27773572587?text=Hi,%20I%20found%20Nazarite%20Digital%20Solutions%20online%20and%20am%20interested%20in%20a%20website.%20Could%20you%20please%20provide%20more%20information%20about%20your%20services%20and%20pricing?" class="contact-button whatsapp-button" target="_blank" rel="noopener noreferrer">
+            <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M16 0C7.163 0 0 7.163 0 16c0 2.828.738 5.482 2.027 7.793L0 32l8.417-2.007A15.934 15.934 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.2a13.14 13.14 0 01-6.694-1.833l-.48-.285-4.995 1.191 1.237-4.856-.314-.499A13.138 13.138 0 012.8 16C2.8 8.71 8.71 2.8 16 2.8S29.2 8.71 29.2 16 23.29 29.2 16 29.2zm7.19-9.837c-.394-.197-2.33-1.148-2.692-1.279-.362-.131-.625-.197-.888.197-.263.393-1.02 1.279-1.25 1.542-.23.263-.46.296-.854.099-.394-.197-1.663-.613-3.168-1.955-1.17-1.045-1.96-2.335-2.19-2.729-.23-.393-.024-.606.173-.801.178-.177.394-.46.591-.69.197-.23.263-.394.394-.657.131-.263.066-.493-.033-.69-.099-.197-.888-2.14-1.217-2.928-.32-.77-.645-.666-.888-.679-.23-.012-.493-.015-.756-.015-.263 0-.69.099-.1051.493-.362.394-1.38 1.348-1.38 3.289s1.413 3.815 1.61 4.078c.197.263 2.78 4.245 6.737 5.952.942.407 1.676.649 2.249.831.945.3 1.805.258 2.485.156.758-.113 2.33-.952 2.659-1.872.328-.92.328-1.708.23-1.872-.099-.164-.362-.263-.756-.46z"/>
+            </svg>
+            WhatsApp Us
+          </a>
+
+          <!-- EMAIL -->
+          
+          <a href="mailto:nazaritedigitalsolutions@gmail.com?subject=Website%20Enquiry&body=Hi,%20I%20found%20Nazarite%20Digital%20Solutions%20online%20and%20am%20interested%20in%20a%20website.%20Could%20you%20please%20provide%20more%20information%20about%20your%20services%20and%20pricing?" class="contact-button email-button">
+            <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2l-8 5-8-5h16zm0 12H4V9l8 5 8-5v9z"/>
+            </svg>
+            Email Us
+          </a>
+        </div>
+
+        <!-- ENQUIRY FORM HEADING -->
+      
+        <h2 class="enquiry-form-heading">ENQUIRY FORM</h2>
+
+        <!-- FORM -->
+      
+        <form
+          class="enquiry-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          id="contactForm"
+        >
+        
+          <input type="hidden" name="access_key" value="f0f9b112-6094-40b4-a955-550e15edb493"/>
+          <input type="hidden" name="subject" value="New Website Enquiry - Nazarite Digital Solutions">
+
+          <input type="checkbox" name="botcheck" style="display:none;" />
+
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            autocomplete="name"
+          />
+
+          <input
+            type="text"
+            name="business_name"
+            placeholder="Business Name (optional)"
+            autocomplete="organization"
+          />
+          
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            autocomplete="email"
+          />
+          
+          <input
+            type="text"
+            name="budget"
+            placeholder="Estimated Budget (optional)"
+          />
+
+          <input
+            type="text"
+            name="timeline"
+            placeholder="Desired Completion Date (optional)"
+          />
+          
+          <textarea
+            name="project_details"
+            placeholder="Tell us about your project, including the type of website you need, desired features, and any design preferences"
+            required
+          ></textarea>
+
+          <!-- CAPTCHA -->
+        
+            <div class="h-captcha"
+             data-captcha="true">
+            </div>
+          
+          <!-- SUBMIT BUTTON -->
+          
+          <button type="submit" class="submit-button" id="submitBtn">SUBMIT</button>
+
+          <audio id="submitSound" src="submit-sound.mp3" preload="auto"></audio>
+        </form>
+        
+      </div>
+
+      <!-- COPYRIGHT -->
+      
+      <p class="copyright">&copy; 2026 Nazarite Digital Solutions. All Rights Reserved.</p>
+
+    </div>
+
+    <script>
+      const form = document.getElementById('contactForm');
+      const sound = document.getElementById('submitSound');
+
+      form.addEventListener('submit', function (e) {
+      
+        if (sound) {
+          sound.currentTime = 0;
+          sound.play().catch(() => {});
+        }
+      });
+    </script>
+    
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    
+  </body>
+</html>

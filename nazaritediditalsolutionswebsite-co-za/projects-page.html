@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+    <title>Projects | Nazarite Digital Solutions</title>
+    <meta name="description" content="Explore website design and development projects from Nazarite Digital Solutions, showcasing responsive, user-friendly websites built for businesses in South Africa and beyond.">
+    <link rel="canonical" href="https://www.nazaritedigitalsolutions.com/projects-page">
+    
+    <!-- GOOGLE TAG -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VVN8PZJTV5');
+    </script>
+    
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="Nazarite Digital Solutions">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon-nazarite-digital-solutions.svg">
+    <link rel="preload" as="image" href="logo-nazarite-digital-solutions.svg" fetchpriority="high">
+  
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      html, body { width: 100%; min-height: 100vh; background: linear-gradient(to bottom, white, #7171D1); }
+
+/* ───────────────────────────────────────────────────── HEADER ───────────────────────────────────────────────────── */
+
+      /* ---------- HEADER ---------- */
+      
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        z-index: 200;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0 3vw;
+      }
+      
+      /* ---------- NAVBAR ---------- */
+      
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3vw;
+        z-index: 1000;
+      }
+
+      /* ---------- LOGO ---------- */
+      
+      .navbar-logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-shrink: 0;
+      }
+
+      .navbar-logo img {
+        height: 4rem;
+        width: auto;
+        display: block;
+      }
+
+      /* ---------- HAMBURGER BUTTON ---------- */
+      
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.2rem;
+        flex-shrink: 0;
+        z-index: 1100;
+      }
+
+      .hamburger .bar {
+        display: block;
+        width: 1.7rem;
+        height: 2.5px;
+        background-color: #006400;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+        transform-origin: center;
+      }
+
+      .hamburger.is-open .bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+        background-color: #00004D;
+      }
+    
+      .hamburger.is-open .bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+    
+      .hamburger.is-open .bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+        background-color: #00004D;
+      }
+
+      /* ---------- HAMBURGER DROP DOWN MENU ---------- */
+      
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 5rem;
+        right: 3vw;
+        width: min(22rem, 90vw);
+        text-align: center;
+        background-color: #00006D;
+        border-radius: 0.5rem;
+        flex-direction: column;
+        z-index: 999;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.35s ease;
+      }
+
+      .mobile-menu.is-open {
+        display: flex;
+        max-height: 50vh;
+      }
+
+      .mobile-menu a {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 1rem 3vw;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        display: block;
+      }
+
+      .mobile-menu a:last-child {
+        border-bottom: none;
+      }
+
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 1024px ---------- */
+      
+      @media (max-width: 1024px) {
+        .mobile-menu a:hover {
+          opacity: 1;
+        }
+      }
+
+      /* ---------- 700px ---------- */
+      
+      @media (max-width: 700px) {
+        .navbar {
+          padding: 0 4vw;
+        }
+
+        .navbar-logo img {
+          height: 2.5rem;
+        }
+
+        .mobile-menu a {
+          font-size: 1rem;
+          padding: 0.9rem 6vw;
+        }
+      }
+
+      /* ---------- 468px ---------- */
+      
+      @media (max-width: 468px) {
+        .navbar {
+          padding: 0 5vw;
+        }
+
+        .navbar-logo img {
+          height: 2rem;
+        }
+
+        .hamburger {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .hamburger .bar {
+          width: 1.4rem;
+        }
+  
+        .mobile-menu a {
+          font-size: 0.95rem;
+          padding: 0.8rem 7vw;
+        }
+      }
+
+/* ────────────────────────────────────────────────── PROJECTS PAGE ───────────────────────────────────────────────── */
+
+      /* ---------- PROJECTS PAGE WRAPPER ---------- */
+      
+      .projects-page-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding-top: 7rem;
+        padding-bottom: 0;
+      }
+
+      /* ---------- PROJECTS PAGE HEADING ---------- */
+      
+      .projects-page-heading {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #00006D;
+        text-align: center;
+        letter-spacing: 0.04em;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+      }
+
+      /* ---------- CARDS ROW ---------- */
+    
+      .cards-row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 2rem;
+        width: 90%;
+        max-width: 1100px;
+        margin-bottom: 3rem;
+      }
+
+      /* ---------- INDIVIDUAL CARD ---------- */
+    
+      .project-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        background: white;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .project-card-link {
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex: 1;
+      }
+
+      /* ---------- CARD IMAGE ---------- */
+      
+      .card-image-wrap {
+        flex: 1 1 auto;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .card-image-wrap picture,
+      .card-image-wrap img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* ---------- CARD FOOTER ---------- */
+    
+      .card-footer {
+        background: #00006D;
+        padding: 0.85rem 1rem;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .card-footer span {
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 0.08em;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 30px #4E4E52, 
+                    0 0 40px #4E4E52, 
+                    0 0 50px #4E4E52;
+      }
+
+      /* ---------- PROJECTS PAGE BUTTONS ---------- */
+    
+      .projects-page-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .projects-page-button {
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        background: #006400;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .projects-page-button:hover {
+        transform: translateY(-5px);
+      }
+
+      /* ---------- COPYRIGHT ---------- */
+      
+      .copyright {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 0.8rem;
+        color: black;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+      }
+
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 700px ---------- */
+    
+      @media screen and (max-width: 700px) {
+        .projects-page-heading {
+          font-size: 1.4rem;
+          margin-bottom: 2rem;
+        }
+
+        .cards-row {
+          flex-direction: column;
+          align-items: center;
+          width: 92%;
+          gap: 2rem;
+          margin-bottom: 2.5rem;
+        }
+
+        .project-card {
+          width: 100%;
+          flex: none;
+        }
+
+        .card-image-placeholder {
+          height: 14rem;
+        }
+
+        .projects-page-buttons {
+          gap: 1rem;
+          margin-bottom: 2.5rem;
+        }
+
+        .projects-page-button {
+          font-size: 0.95rem;
+          padding: 0.7rem 1.5rem;
+        }
+        
+        .projects-page-button:hover {
+          transform: none;
+        }
+        
+        .project-card:hover {
+          transform: none;
+          box-shadow: none;
+        }
+      }
+
+      /* ---------- 468px ---------- */
+    
+      @media screen and (max-width: 468px) {
+        .projects-page-heading {
+          font-size: 1.15rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .cards-row {
+          width: 95%;
+          gap: 1.5rem;
+          margin-bottom: 2rem;
+        }
+
+        .card-image-placeholder {
+          height: 12rem;
+        }
+
+        .projects-page-buttons {
+          gap: 0.8rem;
+          margin-bottom: 2rem;
+        }
+        
+        .projects-page-button:hover {
+          transform: none;
+        }
+        
+        .project-card:hover {
+          transform: none;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  
+<!-- ──────────────────────────────────────────────────── BODY ───────────────────────────────────────────────────── -->
+  
+  <body id="projects-page">
+
+<!-- ─────────────────────────────────────────────────── HEADER ──────────────────────────────────────────────────── -->
+  
+    <header class="site-header">
+  
+      <nav class="navbar">
+
+        <!-- LOGO -->
+    
+        <div class="navbar-logo">
+          <a href="index.html">
+            <img src="logo-nazarite-digital-solutions.svg" alt="Nazarite Digital Solutions Logo" width="268" height="80" fetchpriority="high">
+          </a>
+        </div>
+
+      <!-- HAMBURGER -->
+    
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+      </nav>
+
+      <!-- HAMBURGER DROP DOWN MENU -->
+  
+      <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-page">About</a>
+        <a href="#projects-page">Projects</a>
+        <a href="services-page.html">Services</a>
+        <a href="contact-page.html">Contact</a>
+        <a href="terms-and-conditions-page.html">Terms & Conditions</a>
+      </div>
+    
+    </header>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.classList.toggle('is-open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+
+        if (isOpen) {
+          mobileMenu.classList.add('is-open');
+        } else {
+          mobileMenu.classList.remove('is-open');
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', false);
+          mobileMenu.classList.remove('is-open');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', false);
+          mobileMenu.classList.remove('is-open');
+        }
+      });
+    </script>
+
+<!-- ────────────────────────────────────────────────── PROJECTS PAGE ─────────────────────────────────────────────── -->
+
+    <main class="projects-page-wrapper">
+
+      <!-- PROJECTS PAGE HEADING -->
+    
+      <h1 class="projects-page-heading">Explore Our Projects</h1>
+
+      <!-- CARDS ROW -->
+      
+      <div class="cards-row">
+
+        <!-- CARD 1 -->
+        
+        <a href="https://xyzsprings.vercel.app" target="_blank" rel="noopener noreferrer" class="project-card-link">
+          <div class="project-card">
+            <div class="card-image-wrap">
+              <picture>
+                <source srcset="project-1.webp" type="image/webp" />
+                <img src="project-1.jpg" alt="Demo Project 1" />
+              </picture>
+            </div>
+            <div class="card-footer">
+              <span>VIEW</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- CARD 2 -->
+        
+        <a href="https://heartfulhound.co.za" target="_blank" rel="noopener noreferrer" class="project-card-link">
+          <div class="project-card">
+            <div class="card-image-wrap">
+              <picture>
+                <source srcset="project-2.webp" type="image/webp" />
+                <img src="project-2.jpg" alt="Demo Project 2" />
+              </picture>
+            </div>
+            <div class="card-footer">
+              <span>VIEW</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- BUTTONS -->
+      
+      <div class="projects-page-buttons">
+        <a href="services-page.html" class="projects-page-button">View Services</a>
+        <a href="contact-page.html" class="projects-page-button">Contact Us</a>
+      </div>
+
+      <!-- COPYRIGHT -->
+    
+      <p class="copyright">&copy; 2026 Nazarite Digital Solutions. All Rights Reserved.</p>
+
+    </main>
+    
+  </body>
+</html>

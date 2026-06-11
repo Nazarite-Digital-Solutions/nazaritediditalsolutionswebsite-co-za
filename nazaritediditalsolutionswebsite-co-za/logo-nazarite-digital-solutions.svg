@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="460" height="110" font-family="Georgia, 'Times New Roman', serif">
+
+  <!-- < bracket -->
+  <text
+    x="0"
+    y="82"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="90"
+    font-weight="bold"
+    fill="#00006d"
+  >&lt;</text>
+
+  <!-- Letter N -->
+  <text
+    x="52"
+    y="82"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="90"
+    font-weight="bold"
+    fill="#006400"
+  >N</text>
+
+  <!-- > bracket -->
+  <text
+    x="112"
+    y="82"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="90"
+    font-weight="bold"
+    fill="#00006d"
+  >&gt;</text>
+
+  <!-- Divider line -->
+  <line x1="175" y1="10" x2="175" y2="100" stroke="#006400" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- NAZARITE -->
+  <text
+    x="192"
+    y="38"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="34"
+    font-weight="bold"
+    fill="#006400"
+    letter-spacing="4"
+  >NAZARITE</text>
+
+  <!-- DIGITAL -->
+  <text
+    x="195"
+    y="67"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="30"
+    font-weight="600"
+    fill="#00004d"
+    letter-spacing="9"
+  >DIGITAL</text>
+
+  <!-- SOLUTIONS -->
+  <text
+    x="194"
+    y="94"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="20"
+    font-weight="600"
+    fill="#006400"
+    letter-spacing="7"
+  >SOLUTIONS</text>
+
+</svg>

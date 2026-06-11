@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+    <title>Services | Nazarite Digital Solutions</title>
+    <meta name="description" content="Discover professional web solutions from Nazarite Digital Solutions, including custom websites, hosting, maintenance, and tailored digital services designed to support business growth.">
+    <link rel="canonical" href="https://www.nazaritedigitalsolutions.com/services-page">
+    
+    <!-- GOOGLE TAG -->
+    
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-VVN8PZJTV5');
+    </script>
+    
+    <meta name="robots" content="index, follow">
+
+    <meta name="author" content="Nazarite Digital Solutions">
+    
+    <link rel="icon" type="image/svg+xml" href="favicon-nazarite-digital-solutions.svg">
+    <link rel="preload" as="image" href="logo-nazarite-digital-solutions.svg" fetchpriority="high">
+    
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body { background: linear-gradient(to bottom, white, #41A341); padding-top: 5rem; }
+
+/* ───────────────────────────────────────────────────── HEADER ───────────────────────────────────────────────────── */
+
+      /* ---------- HEADER ---------- */
+      
+      .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        z-index: 200;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        padding: 0 3vw;
+      }
+      
+      /* ---------- NAVBAR ---------- */
+      
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 5rem;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3vw;
+        z-index: 1000;
+      }
+
+      /* ---------- LOGO ---------- */
+      
+      .navbar-logo {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        flex-shrink: 0;
+      }
+
+      .navbar-logo img {
+        height: 4rem;
+        width: auto;
+        display: block;
+      }
+
+      /* ---------- HAMBURGER BUTTON ---------- */
+      
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 2.4rem;
+        height: 2.4rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0.2rem;
+        flex-shrink: 0;
+        z-index: 1100;
+      }
+
+      .hamburger .bar {
+        display: block;
+        width: 1.7rem;
+        height: 2.5px;
+        background-color: #006400;
+        border-radius: 2px;
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+        transform-origin: center;
+      }
+
+      .hamburger.is-open .bar:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+        background-color: #00004D;
+      }
+    
+      .hamburger.is-open .bar:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+    
+      .hamburger.is-open .bar:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+        background-color: #00004D;
+      }
+
+      /* ---------- HAMBURGER DROP DOWN MENU ---------- */
+      
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 5rem;
+        right: 3vw;
+        width: min(22rem, 90vw);
+        text-align: center;
+        background-color: #00006D;
+        border-radius: 0.5rem;
+        flex-direction: column;
+        z-index: 999;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.35s ease;
+      }
+
+      .mobile-menu.is-open {
+        display: flex;
+        max-height: 50vh;
+      }
+
+      .mobile-menu a {
+        font-size: 1.1rem;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        padding: 1rem 3vw;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        display: block;
+      }
+
+      .mobile-menu a:last-child {
+        border-bottom: none;
+      }
+
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 1024px ---------- */
+      
+      @media (max-width: 1024px) {
+        .mobile-menu a:hover {
+          opacity: 1;
+        }
+      }
+
+      /* ---------- 700px ---------- */
+      
+      @media (max-width: 700px) {
+        .navbar {
+          padding: 0 4vw;
+        }
+
+        .navbar-logo img {
+          height: 2.5rem;
+        }
+
+        .mobile-menu a {
+          font-size: 1rem;
+          padding: 0.9rem 6vw;
+        }
+      }
+
+      /* ---------- 468px ---------- */
+      
+      @media (max-width: 468px) {
+        .navbar {
+          padding: 0 5vw;
+        }
+
+        .navbar-logo img {
+          height: 2rem;
+        }
+
+        .hamburger {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .hamburger .bar {
+          width: 1.4rem;
+        }
+  
+        .mobile-menu a {
+          font-size: 0.95rem;
+          padding: 0.8rem 7vw;
+        }
+      }
+      
+/* ────────────────────────────────────────────────── SERVICES PAGE ───────────────────────────────────────────────── */
+
+      /* ---------- SERVICES PAGE CONTENT ---------- */
+      
+      .services-page-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 2rem 0 2rem;
+      }
+
+      /* ---------- SERVICES PAGE HEADING ---------- */
+      
+      .services-page-heading {
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-weight: 700;
+        color: #00006D;
+        font-size: 2.8rem;
+        margin-bottom: 2.5rem;
+        letter-spacing: 0.08em;
+      }
+
+      /* ---------- SERVICE CARDS ---------- */
+      
+      .service-card {
+        background: #CCC8E8;
+        border: 1px solid #006400;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px #00006D, 
+                    0 0 20px #00006D, 
+                    0 0 30px #00006D;
+        padding: 1.8rem 2rem;
+      }
+      
+      .professional-service-card {
+        background: #E1F0E1;
+        border: 1px solid #00006D;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px #006400, 
+                    0 0 20px #006400, 
+                    0 0 30px #006400;
+        padding: 1.8rem 2rem;
+      }
+      
+      .hosting-service-card {
+        background: white;
+        border: 3px solid #00006D;
+        border-radius: 0.5rem;
+        box-shadow: none;
+        padding: 1.8rem 2rem;
+      }
+      
+      .need-something-different-card {
+        background: white;
+        border: 3px solid #006400;
+        border-radius: 0.5rem;
+        box-shadow: none;
+        padding: 1.8rem 2rem;
+      }
+
+      .service-card-heading {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-weight: 700;
+        color: #006400;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      .professional-service-card-heading {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-weight: 700;
+        color: #00006D;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+      
+      .hosting-management-service-card-heading {
+        font-family: Georgia, 'Times New Roman', serif;
+        font-weight: 700;
+        color: #00006D;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+      }
+
+      .service-card-price {
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        color: black;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      .service-card ul, 
+      .professional-service-card ul,
+      .hosting-service-card ul,
+      .need-something-different-card ul {
+        list-style: disc;
+        padding-left: 1.4rem;
+      }
+
+      .service-card ul li, 
+      .professional-service-card ul li,
+      .hosting-service-card ul li,
+      .need-something-different-card ul li {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+      
+      .service-card-terms-and-conditions {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-size: 1rem;
+        text-align: center;
+        border-top: 1px solid black;
+        padding-top: 1rem;
+      }
+      
+      .service-card-terms-and-conditions a {
+        color: #006400;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+
+      .service-card-terms-and-conditions a:hover {
+        opacity: 0.7;
+      }
+      
+      .professional-service-card-terms-and-conditions {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-size: 1rem;
+        text-align: center;
+        border-top: 1px solid black;
+        padding-top: 1rem;
+      }
+      
+      .professional-service-card-terms-and-conditions a {
+        color: #00006D;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+      
+      .professional-service-card-terms-and-conditions a:hover {
+        opacity: 0.7;
+      }
+
+      /* ---------- FIRST ROW WITH 2 BOXES ---------- */
+      
+      .row-one {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      /* ---------- CENTERED CARDS ---------- */
+    
+      .row-two {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+      }
+      
+      .row-two .service-card,
+      .row-two .professional-service-card,
+      .hosting-service-card,
+      .need-something-different-card {
+        width: 100%;
+        max-width: 800px;
+      }
+
+      /* ---------- BONUS SECTION ---------- */
+      
+      .service-bonus-divider {
+        border: none;
+        border-top: 1px solid #c0c0c0;
+        margin: 1.4rem 0;
+      }
+
+      .service-bonus-label {
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        color: #00006D;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .service-bonus-subtitle {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0.8rem;
+      }
+
+      .service-bonus-includes {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-size: 1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      /* ---------- HOSTING CARD ---------- */
+    
+      .hosting-text {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+      
+      /* ---------- NEED SOMETHING DIFFERENT TEXT ---------- */
+      
+      .need-something-different-text {
+        font-family: Arial, sans-serif;
+        color: black;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.6;
+      }
+
+      /* ---------- BUTTONS ---------- */
+    
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+
+      .service-page-button {
+        background: #00006D;
+        color: white;
+        font-family: Arial, sans-serif;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 0.5rem;
+        padding: 0.75rem 2rem;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.2s ease;
+      }
+      
+      .service-page-button:hover {
+        transform: translateY(-5px);
+      }
+
+      /* ---------- COPYRIGHT ---------- */
+    
+      .copyright {
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 0.8rem;
+        color: black;
+        margin-bottom: 3rem;
+      }
+
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 700px ---------- */
+    
+      @media (max-width: 700px) {
+        .row-one {
+          grid-template-columns: 1fr;
+        }
+
+        .services-page-heading {
+          font-size: 1.7rem;
+        }
+
+        .service-page-button {
+          padding: 0.7rem 1.5rem;
+          font-size: 0.95rem;
+        }
+      
+        .service-page-button:hover {
+          transform: none;
+        }
+      }
+
+      /* ---------- 468px ---------- */
+    
+      @media (max-width: 468px) {
+        body {
+          padding-top: 5rem;
+        }
+
+        .services-page-content {
+          padding: 2rem 1rem 0 1rem;
+        }
+
+        .services-page-heading {
+          font-size: 1.4rem;
+          margin-bottom: 1.8rem;
+        }
+
+        .service-card, 
+        .professional-service-card,
+        .hosting-service-card,
+        .need-something-different-card {
+          padding: 1.2rem;
+        }
+
+        .service-card-heading,
+        .professional-service-card-heading,
+        .hosting-management-service-card-heading {
+          font-size: 1.1rem;
+        }
+
+        .service-card ul li,
+        .hosting-service-card ul li,
+        .professional-service-card ul li {
+          font-size: 0.88rem;
+        }
+
+        .buttons {
+          gap: 0.8rem;
+        }
+      
+        .service-page-button:hover {
+          transform: none;
+        }
+      }
+    </style>
+</head>
+
+<!-- ──────────────────────────────────────────────────── BODY ───────────────────────────────────────────────────── -->
+  
+  <body>
+
+<!-- ─────────────────────────────────────────────────── HEADER ──────────────────────────────────────────────────── -->
+  
+    <header class="site-header">
+  
+      <nav class="navbar">
+
+        <!-- LOGO -->
+    
+        <div class="navbar-logo">
+          <a href="index.html">
+            <img src="logo-nazarite-digital-solutions.svg" alt="Nazarite Digital Solutions Logo" width="268" height="80" fetchpriority="high">
+          </a>
+        </div>
+
+      <!-- HAMBURGER -->
+    
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+      </nav>
+
+      <!-- HAMBURGER DROP DOWN MENU -->
+  
+      <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about-page">About</a>
+        <a href="projects-page.html">Projects</a>
+        <a href="services-page.html">Services</a>
+        <a href="contact-page.html">Contact</a>
+        <a href="terms-and-conditions-page.html">Terms & Conditions</a>
+      </div>
+    
+    </header>
+
+    <script>
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+
+      hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.classList.toggle('is-open');
+        hamburger.setAttribute('aria-expanded', isOpen);
+
+        if (isOpen) {
+          mobileMenu.classList.add('is-open');
+        } else {
+          mobileMenu.classList.remove('is-open');
+        }
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', false);
+          mobileMenu.classList.remove('is-open');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+          hamburger.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', false);
+          mobileMenu.classList.remove('is-open');
+        }
+      });
+    </script>
+
+<!-- ───────────────────────────────────────────────── SERVICES PAGE ─────────────────────────────────────────────── -->
+
+    <main class="services-page-content">
+
+      <h1 class="services-page-heading">Our Services</h1>
+
+      <div class="row-one">
+
+        <!-- STARTER WEBSITE DESIGN -->
+        
+        <div class="service-card">
+          <h2 class="service-card-heading">Starter Website Design</h2>
+          <p class="service-card-price">From R3000 once-off</p>
+          <ul>
+            <li>1–3 page responsive website (mobile &amp; tablet friendly)</li>
+            <li>Domain setup assistance (DNS + hosting connection guidance)</li>
+            <li>On-page SEO setup (meta titles, descriptions, image alt tags)</li>
+            <li>Performance optimisation (image compression &amp; basic speed setup)</li>
+            <li>Security setup (SSL configuration + HTTPS enforcement)</li>
+            <li>Contact form + email integration</li>
+          </ul>
+          <p class="service-card-terms-and-conditions">A 50% non-refundable deposit is required to commence work. The 
+            remaining balance is payable upon completion prior to launch. By proceeding, you agree to our 
+            <a href="terms-and-conditions-page.html">Terms & Conditions</a>.
+          </p>
+        </div>
+
+        <!-- BASIC MAINTENANCE PACKAGE -->
+        
+        <div class="service-card">
+          <h2 class="service-card-heading">Basic Maintenance Package</h2>
+          <p class="service-card-price">From R400 per month</p>
+          <ul>
+            <li>Up to 3 small content edits per month (text/images)</li>
+            <li>Minor layout fixes (if something breaks or shifts)</li>
+            <li>Monthly website check (links, forms, basic functionality)</li>
+            <li>Monthly website performance report (website speed and visitor statistics)</li>
+            <li>Priority support for small updates</li>
+          </ul>
+          <p class="service-card-terms-and-conditions">A once-off setup fee applies. Monthly billing begins after setup 
+            is complete. By proceeding, you agree to our
+            <a href="terms-and-conditions-page.html">Terms & Conditions</a>.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- PROFESSIONAL WEBSITE DESIGN -->
+      
+      <div class="row-two">
+        <div class="professional-service-card">
+          <h2 class="professional-service-card-heading">Professional Website Design</h2>
+          <p class="service-card-price">From R7000 once-off (South African clients)</p>
+          <ul>
+            <li>Custom 4-8 page responsive website (mobile &amp; tablet optimised)</li>
+            <li>Need more pages? Additional pages available at R150 per page</li>
+            <li>Custom layout/design improvements (more tailored UI than Starter)</li>
+            <li>Domain registration included for the first year (.co.za, .com or equivalent standard domain)</li>
+            <li>Domain renewal fees after the first year are the client's responsibility</li>
+            <li>On-page SEO setup (advanced structure for better indexing)</li>
+            <li>Performance optimisation (image compression, asset optimisation, and speed improvements)</li>
+            <li>Security setup (SSL + HTTPS + best practice hardening)</li>
+            <li>Contact form + email integration</li>
+          </ul>
+
+          <hr class="service-bonus-divider" />
+
+          <p class="service-bonus-label">COMPLIMENTARY BONUS</p>
+          <p class="service-bonus-subtitle">2 Months Free Website Maintenance (Basic Maintenance Package)</p>
+          <p class="service-bonus-includes">Includes:</p>
+          <ul>
+            <li>Up to 3 small content edits per month (text/images)</li>
+            <li>Minor layout fixes (if something breaks or shifts)</li>
+            <li>Monthly website check (links, forms, basic functionality)</li>
+            <li>Monthly website performance report (website speed and visitor statistics)</li>
+            <li>Priority support for small updates</li>
+          </ul>
+          <p class="professional-service-card-terms-and-conditions">A 50% non-refundable deposit is required to commence work. The 
+            remaining balance is payable upon completion prior to launch. By proceeding, you agree to our 
+            <a href="terms-and-conditions-page.html">Terms & Conditions</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- HOSTING MANAGEMENT -->
+    
+      <div class="row-two">
+        <div class="hosting-service-card">
+          <h2 class="hosting-management-service-card-heading">Hosting Management (optional add-on)</h2>
+          <p class="hosting-text">
+            Hosting management can be included depending on the client's requirements.
+            Pricing may vary based on hosting provider costs and website usage (traffic, storage, and features).
+          </p>
+        </div>
+      </div>
+    
+    
+      
+      <div class="row-two">
+        <div class="need-something-different-card">
+          <h2 class="service-card-heading">Need Something Different?</h2>
+          <p class="need-something-different-text">
+            We provide a range of website solutions. While the packages above are our most popular options, we also create 
+            custom websites and digital solutions tailored to your business goals. If your requirements fall outside these 
+            packages, get in touch for a personalised quote.
+          </p>
+        </div>
+      </div>
+
+      <!-- BUTTONS -->
+      
+      <div class="buttons">
+        <a href="projects-page.html" class="service-page-button">View Projects</a>
+        <a href="contact-page.html" class="service-page-button">Contact Us</a>
+      </div>
+
+      <!-- COPYRIGHT -->
+      
+      <p class="copyright">&copy; 2026 Nazarite Digital Solutions. All Rights Reserved.</p>
+
+    </main>
+
+  </body>
+</html>
