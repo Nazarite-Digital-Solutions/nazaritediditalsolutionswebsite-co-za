@@ -41,7 +41,7 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-      body { background: linear-gradient(to bottom, white, #41A341); padding-top: 5rem; }
+      body { background: white; padding-top: 5rem; }
 
 /* ───────────────────────────────────────────────────── HEADER ───────────────────────────────────────────────────── */
 
@@ -167,60 +167,55 @@
         display: block;
       }
 
-      .mobile-menu a:last-child {
-        border-bottom: none;
+      .mobile-menu a:last-child { border-bottom: none; }
+      
+      .mobile-menu a:hover { 
+        opacity: 1; 
+        background-color: #006400; 
       }
 
 /* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
 
-      /* ---------- 1024px ---------- */
-      
-      @media (max-width: 1024px) {
-        .mobile-menu a:hover {
-          opacity: 1;
-        }
-      }
-
       /* ---------- 700px ---------- */
       
       @media (max-width: 700px) {
-        .navbar {
-          padding: 0 4vw;
-        }
+        .navbar { padding: 0 4vw; }
 
-        .navbar-logo img {
-          height: 2.5rem;
-        }
+        .navbar-logo img { height: 2.5rem; }
 
         .mobile-menu a {
           font-size: 1rem;
           padding: 0.9rem 6vw;
+        }
+        
+        .mobile-menu a:hover { 
+          opacity: 0; 
+          background-color: #00006D; 
         }
       }
 
       /* ---------- 468px ---------- */
       
       @media (max-width: 468px) {
-        .navbar {
-          padding: 0 5vw;
-        }
+        .navbar { padding: 0 5vw; }
 
-        .navbar-logo img {
-          height: 2rem;
-        }
+        .navbar-logo img { height: 2rem; }
 
         .hamburger {
           width: 2rem;
           height: 2rem;
         }
 
-        .hamburger .bar {
-          width: 1.4rem;
-        }
+        .hamburger .bar { width: 1.4rem; }
   
         .mobile-menu a {
           font-size: 0.95rem;
           padding: 0.8rem 7vw;
+        }
+        
+        .mobile-menu a:hover { 
+          opacity: 0; 
+          background-color: #00006D; 
         }
       }
       
@@ -249,7 +244,7 @@
       /* ---------- SERVICE CARDS ---------- */
       
       .service-card {
-        background: #CCC8E8;
+        background: #E4E4ED;
         border: 1px solid #006400;
         border-radius: 0.5rem;
         box-shadow: 0 0 10px #00006D, 
@@ -259,7 +254,7 @@
       }
       
       .professional-service-card {
-        background: #E1F0E1;
+        background: #DCE8DC;
         border: 1px solid #00006D;
         border-radius: 0.5rem;
         box-shadow: 0 0 10px #006400, 
@@ -373,29 +368,20 @@
         text-decoration: underline;
       }
       
-      .professional-service-card-terms-and-conditions a:hover {
-        opacity: 0.7;
-      }
-
-      /* ---------- FIRST ROW WITH 2 BOXES ---------- */
-      
-      .row-one {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-      }
+      .professional-service-card-terms-and-conditions a:hover { opacity: 0.7; }
 
       /* ---------- CENTERED CARDS ---------- */
     
-      .row-two {
+      .service-cards-column {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
         margin-bottom: 3rem;
       }
       
-      .row-two .service-card,
-      .row-two .professional-service-card,
+      .service-cards-column .service-card,
+      .service-cards-column .professional-service-card,
       .hosting-service-card,
       .need-something-different-card {
         width: 100%;
@@ -406,7 +392,7 @@
       
       .service-bonus-divider {
         border: none;
-        border-top: 1px solid #c0c0c0;
+        border-top: 1px solid #00006D;
         margin: 1.4rem 0;
       }
 
@@ -481,9 +467,7 @@
         transition: transform 0.2s ease;
       }
       
-      .service-page-button:hover {
-        transform: translateY(-5px);
-      }
+      .service-page-button:hover { transform: translateY(-5px); }
 
       /* ---------- COPYRIGHT ---------- */
     
@@ -500,37 +484,27 @@
       /* ---------- 700px ---------- */
     
       @media (max-width: 700px) {
-        .row-one {
-          grid-template-columns: 1fr;
-        }
-
-        .services-page-heading {
-          font-size: 1.7rem;
-        }
+        .services-page-heading { font-size: 1.9rem; }
 
         .service-page-button {
           padding: 0.7rem 1.5rem;
           font-size: 0.95rem;
         }
       
-        .service-page-button:hover {
-          transform: none;
-        }
+        .service-page-button:hover { transform: none; }
+      
+        .copyright { margin-bottom: 1rem; }
       }
-
-      /* ---------- 468px ---------- */
+        
+      /* ---------- 430px ---------- */
     
-      @media (max-width: 468px) {
-        body {
-          padding-top: 5rem;
-        }
+      @media (max-width: 430px) {
+        body { padding-top: 4.2rem; }
 
-        .services-page-content {
-          padding: 2rem 1rem 0 1rem;
-        }
+        .services-page-content { padding: 2rem 1rem 0 1rem; }
 
         .services-page-heading {
-          font-size: 1.4rem;
+          font-size: 1.7rem;
           margin-bottom: 1.8rem;
         }
 
@@ -553,13 +527,11 @@
           font-size: 0.88rem;
         }
 
-        .buttons {
-          gap: 0.8rem;
-        }
+        .buttons { gap: 0.8rem; }
+        
+        .copyright { margin-bottom: 1rem; }
       
-        .service-page-button:hover {
-          transform: none;
-        }
+        .service-page-button:hover { transform: none; }
       }
     </style>
 </head>
@@ -600,7 +572,7 @@
         <a href="projects-page.html">Projects</a>
         <a href="services-page.html">Services</a>
         <a href="contact-page.html">Contact</a>
-        <a href="terms-and-conditions-page.html">Terms & Conditions</a>
+        <a href="#terms-and-conditions-page">Terms & Conditions</a>
       </div>
     
     </header>
@@ -643,13 +615,13 @@
 
       <h1 class="services-page-heading">Our Services</h1>
 
-      <div class="row-one">
+      <div class="service-cards-column">
 
         <!-- STARTER WEBSITE DESIGN -->
         
         <div class="service-card">
           <h2 class="service-card-heading">Starter Website Design</h2>
-          <p class="service-card-price">From R3000 once-off</p>
+          <p class="service-card-price">From R2500 once-off</p>
           <ul>
             <li>1–3 page responsive website (mobile &amp; tablet friendly)</li>
             <li>Domain setup assistance (DNS + hosting connection guidance)</li>
@@ -668,7 +640,7 @@
         
         <div class="service-card">
           <h2 class="service-card-heading">Basic Maintenance Package</h2>
-          <p class="service-card-price">From R400 per month</p>
+          <p class="service-card-price">From R300 per month</p>
           <ul>
             <li>Up to 3 small content edits per month (text/images)</li>
             <li>Minor layout fixes (if something breaks or shifts)</li>
@@ -682,14 +654,11 @@
           </p>
         </div>
 
-      </div>
-
       <!-- PROFESSIONAL WEBSITE DESIGN -->
-      
-      <div class="row-two">
+    
         <div class="professional-service-card">
           <h2 class="professional-service-card-heading">Professional Website Design</h2>
-          <p class="service-card-price">From R7000 once-off (South African clients)</p>
+          <p class="service-card-price">From R6000 once-off</p>
           <ul>
             <li>Custom 4-8 page responsive website (mobile &amp; tablet optimised)</li>
             <li>Need more pages? Additional pages available at R150 per page</li>
@@ -718,12 +687,10 @@
             remaining balance is payable upon completion prior to launch. By proceeding, you agree to our 
             <a href="terms-and-conditions-page.html">Terms & Conditions</a>.
           </p>
-        </div>
-      </div>
+        </div>  
 
       <!-- HOSTING MANAGEMENT -->
     
-      <div class="row-two">
         <div class="hosting-service-card">
           <h2 class="hosting-management-service-card-heading">Hosting Management (optional add-on)</h2>
           <p class="hosting-text">
@@ -731,11 +698,7 @@
             Pricing may vary based on hosting provider costs and website usage (traffic, storage, and features).
           </p>
         </div>
-      </div>
-    
-    
       
-      <div class="row-two">
         <div class="need-something-different-card">
           <h2 class="service-card-heading">Need Something Different?</h2>
           <p class="need-something-different-text">
@@ -744,6 +707,7 @@
             packages, get in touch for a personalised quote.
           </p>
         </div>
+        
       </div>
 
       <!-- BUTTONS -->
