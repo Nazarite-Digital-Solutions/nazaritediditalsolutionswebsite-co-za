@@ -41,7 +41,7 @@
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-      html, body { width: 100%; min-height: 100vh; background: linear-gradient(to bottom, white, #7171D1); }
+      body { width: 100%; min-height: 100vh; padding-top: 5rem; background: linear-gradient(to bottom, white, #7171D1); }
 
 /* ───────────────────────────────────────────────────── HEADER ───────────────────────────────────────────────────── */
 
@@ -167,10 +167,58 @@
         display: block;
       }
 
-      .mobile-menu a:last-child {
-        border-bottom: none;
+      .mobile-menu a:last-child { border-bottom: none; }
+      
+      .mobile-menu a:hover { 
+        opacity: 1; 
+        background-color: #006400; 
       }
 
+/* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
+
+      /* ---------- 700px ---------- */
+      
+      @media (max-width: 700px) {
+        .navbar { padding: 0 4vw; }
+
+        .navbar-logo img { height: 2.5rem; }
+
+        .mobile-menu a {
+          font-size: 1rem;
+          padding: 0.9rem 6vw;
+        }
+        
+        .mobile-menu a:hover { 
+          opacity: 0; 
+          background-color: #00006D; 
+        }
+      }
+
+      /* ---------- 468px ---------- */
+      
+      @media (max-width: 468px) {
+        .navbar { padding: 0 5vw; }
+
+        .navbar-logo img { height: 2rem; }
+
+        .hamburger {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        .hamburger .bar { width: 1.4rem; }
+  
+        .mobile-menu a {
+          font-size: 0.95rem;
+          padding: 0.8rem 7vw;
+        }
+        
+        .mobile-menu a:hover { 
+          opacity: 0; 
+          background-color: #00006D; 
+        }
+      }
+      
 /* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
 
       /* ---------- 1024px ---------- */
@@ -232,22 +280,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 100vh;
-        padding-top: 7rem;
-        padding-bottom: 0;
+        margin: 0 auto;
       }
 
       /* ---------- PROJECTS PAGE HEADING ---------- */
       
       .projects-page-heading {
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
         font-family: Georgia, 'Times New Roman', serif;
         font-size: 2.8rem;
         font-weight: 700;
         color: #00006D;
-        text-align: center;
-        letter-spacing: 0.04em;
-        margin-bottom: 3rem;
-        padding: 0 1rem;
+        display: inline-block;
+        width: 100%;
       }
 
       /* ---------- CARDS ROW ---------- */
@@ -329,7 +376,7 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        gap: 1.5rem;
+        gap: 1.2rem;
         margin-bottom: 2rem;
       }
 
@@ -348,9 +395,7 @@
         display: inline-block;
       }
 
-      .projects-page-button:hover {
-        transform: translateY(-5px);
-      }
+      .projects-page-button:hover { transform: translateY(-5px); }
 
       /* ---------- COPYRIGHT ---------- */
       
@@ -360,8 +405,7 @@
         color: black;
         text-align: center;
         margin-top: 1rem;
-        margin-bottom: 3rem;
-        padding: 0 1rem;
+        padding-bottom: 1rem;
       }
 
 /* ───────────────────────────────────────────────── MEDIA QUERIES ────────────────────────────────────────────────── */
@@ -370,8 +414,8 @@
     
       @media screen and (max-width: 700px) {
         .projects-page-heading {
-          font-size: 1.4rem;
-          margin-bottom: 2rem;
+          font-size: 1.9rem;
+          margin-top: 1rem;
         }
 
         .cards-row {
@@ -387,23 +431,16 @@
           flex: none;
         }
 
-        .card-image-placeholder {
-          height: 14rem;
-        }
-
-        .projects-page-buttons {
-          gap: 1rem;
-          margin-bottom: 2.5rem;
-        }
+        .card-image-placeholder { height: 14rem; }
+        
+        .projects-page-buttons { margin-top: 0.5rem; }
 
         .projects-page-button {
           font-size: 0.95rem;
           padding: 0.7rem 1.5rem;
         }
         
-        .projects-page-button:hover {
-          transform: none;
-        }
+        .projects-page-button:hover { transform: none; }
         
         .project-card:hover {
           transform: none;
@@ -411,12 +448,13 @@
         }
       }
 
-      /* ---------- 468px ---------- */
+      /* ---------- 430px ---------- */
     
-      @media screen and (max-width: 468px) {
+      @media screen and (max-width: 430px) {
         .projects-page-heading {
-          font-size: 1.15rem;
-          margin-bottom: 1.5rem;
+          font-size: 1.7rem;
+          margin-top: 1rem;
+          margin-bottom: 2rem;
         }
 
         .cards-row {
@@ -425,18 +463,15 @@
           margin-bottom: 2rem;
         }
 
-        .card-image-placeholder {
-          height: 12rem;
-        }
+        .card-image-placeholder { height: 12rem; }
 
         .projects-page-buttons {
           gap: 0.8rem;
           margin-bottom: 2rem;
+          margin-top: 1rem;
         }
         
-        .projects-page-button:hover {
-          transform: none;
-        }
+        .projects-page-button:hover { transform: none; }
         
         .project-card:hover {
           transform: none;
@@ -479,10 +514,10 @@
       <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
         <a href="index.html">Home</a>
         <a href="index.html#about-page">About</a>
-        <a href="#projects-page">Projects</a>
+        <a href="projects-page.html">Projects</a>
         <a href="services-page.html">Services</a>
         <a href="contact-page.html">Contact</a>
-        <a href="terms-and-conditions-page.html">Terms & Conditions</a>
+        <a href="#terms-and-conditions-page">Terms & Conditions</a>
       </div>
     
     </header>
@@ -518,7 +553,7 @@
         }
       });
     </script>
-
+    
 <!-- ────────────────────────────────────────────────── PROJECTS PAGE ─────────────────────────────────────────────── -->
 
     <main class="projects-page-wrapper">
@@ -537,8 +572,8 @@
           <div class="project-card">
             <div class="card-image-wrap">
               <picture>
-                <source srcset="project-1.webp" type="image/webp" />
-                <img src="project-1.jpg" alt="Demo Project 1" />
+                <source srcset="project-1.webp" type="image/webp">
+                <img src="project-1.jpg" alt="Demo Project 1" loading="lazy" width="1349" height="603">
               </picture>
             </div>
             <div class="card-footer">
@@ -549,12 +584,12 @@
 
         <!-- CARD 2 -->
         
-        <a href="https://heartfulhound.co.za" target="_blank" rel="noopener noreferrer" class="project-card-link">
+        <a href="https://www.heartfulhound.co.za" target="_blank" rel="noopener noreferrer" class="project-card-link">
           <div class="project-card">
             <div class="card-image-wrap">
               <picture>
-                <source srcset="project-2.webp" type="image/webp" />
-                <img src="project-2.jpg" alt="Demo Project 2" />
+                <source srcset="project-2.webp" type="image/webp">
+                <img src="project-2.jpg" alt="Demo Project 2" loading="lazy" width="1339" height="637">
               </picture>
             </div>
             <div class="card-footer">
@@ -571,11 +606,11 @@
         <a href="contact-page.html" class="projects-page-button">Contact Us</a>
       </div>
 
-      <!-- COPYRIGHT -->
-    
-      <p class="copyright">&copy; 2026 Nazarite Digital Solutions. All Rights Reserved.</p>
-
     </main>
+    
+    <!-- COPYRIGHT -->
+    
+    <p class="copyright">&copy; 2026 Nazarite Digital Solutions. All Rights Reserved.</p>
     
   </body>
 </html>
